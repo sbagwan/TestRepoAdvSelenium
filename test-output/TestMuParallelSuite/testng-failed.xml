@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [TestMuParallelSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="ChromeWindowsTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="tests.TestMuTest">
+        <methods>
+          <include name="testMuScenario"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestMuTest -->
+    </classes>
+  </test> <!-- ChromeWindowsTest(failed) -->
+  <test thread-count="2" parallel="classes" name="EdgeMacTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <parameter name="platform" value="macOS Ventura"/>
+    <classes>
+      <class name="tests.TestMuTest">
+        <methods>
+          <include name="testMuScenario"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestMuTest -->
+    </classes>
+  </test> <!-- EdgeMacTest(failed) -->
+</suite> <!-- Failed suite [TestMuParallelSuite] -->
